@@ -9,7 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var cosbyLabel: UILabel!
+    
+    @IBAction func onClick(sender: AnyObject) {
+        if (cosbyLabel.text != "Bill Cosby") {
+            cosbyLabel.text = "Bill Cosby"
+        }
+        else {
+            cosbyLabel.text = "Miley Cyrus"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
