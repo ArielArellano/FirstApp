@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		979B96581C7528F600666158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B96571C7528F600666158 /* AppDelegate.swift */; };
 		979B965A1C7528F600666158 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B96591C7528F600666158 /* ViewController.swift */; };
-		979B965D1C7528F600666158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 979B965B1C7528F600666158 /* Main.storyboard */; };
+		979B965D1C7528F600666158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 979B965B1C7528F600666158 /* Main.storyboard */; settings = {ASSET_TAGS = (drag, ); }; };
 		979B965F1C7528F600666158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 979B965E1C7528F600666158 /* Assets.xcassets */; };
 		979B96621C7528F600666158 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 979B96601C7528F600666158 /* LaunchScreen.storyboard */; };
 		979B966D1C7528F600666158 /* FirstAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B966C1C7528F600666158 /* FirstAppTests.swift */; };
@@ -187,12 +187,16 @@
 		979B964C1C7528F500666158 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					drag,
+				);
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Ariel Gomez A_";
 				TargetAttributes = {
 					979B96531C7528F600666158 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = S446P9X7BG;
 					};
 					979B96671C7528F600666158 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -399,10 +403,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ariel.gomez.FirstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +417,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ariel.gomez.FirstApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +494,7 @@
 				979B967E1C7528F600666158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		979B967F1C7528F600666158 /* Build configuration list for PBXNativeTarget "FirstAppTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +503,7 @@
 				979B96811C7528F600666158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		979B96821C7528F600666158 /* Build configuration list for PBXNativeTarget "FirstAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +512,7 @@
 				979B96841C7528F600666158 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

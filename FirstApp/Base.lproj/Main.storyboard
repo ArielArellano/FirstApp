@@ -24,16 +24,24 @@
                                     <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5cN-ye-FRe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOF-fl-06X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bill Cosby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOF-fl-06X">
                                 <rect key="frame" x="322" y="268" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-nA-kMK">
+                                <rect key="frame" x="241" y="400" width="118" height="31"/>
+                                <connections>
+                                    <action selector="onSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="dLp-1S-3h5"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Fv8-nA-kMK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MMx-Df-pIs"/>
                             <constraint firstItem="zOF-fl-06X" firstAttribute="top" secondItem="mmD-si-bqH" secondAttribute="bottom" constant="106" id="Sc7-xa-gLA"/>
+                            <constraint firstItem="Fv8-nA-kMK" firstAttribute="top" secondItem="mmD-si-bqH" secondAttribute="bottom" constant="238" id="Sdn-LO-yOT"/>
                             <constraint firstItem="mmD-si-bqH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TvR-cg-HNr"/>
                             <constraint firstItem="mmD-si-bqH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="112" id="u86-AU-rp8"/>
                             <constraint firstItem="zOF-fl-06X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uWi-nM-iKj"/>
@@ -41,10 +49,12 @@
                     </view>
                     <connections>
                         <outlet property="cosbyLabel" destination="zOF-fl-06X" id="yrF-dS-IXs"/>
+                        <outlet property="slider" destination="Fv8-nA-kMK" id="5Hy-bY-jHO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.25" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
