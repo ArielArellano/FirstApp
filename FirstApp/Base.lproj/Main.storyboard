@@ -42,23 +42,41 @@
                                     <action selector="changeFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="I1A-OT-e6z"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-1d-F3r">
+                                <rect key="frame" x="280" y="474" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-10" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="OG2-u6-els">
+                                <rect key="frame" x="253" y="527" width="94" height="29"/>
+                                <connections>
+                                    <action selector="changeNumber:" destination="BYZ-38-t0r" eventType="valueChanged" id="BOd-l5-x4X"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hGe-1d-F3r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="95a-Cs-tfM"/>
                             <constraint firstItem="Fv8-nA-kMK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MMx-Df-pIs"/>
+                            <constraint firstItem="OG2-u6-els" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qfx-H8-xUR"/>
                             <constraint firstItem="zOF-fl-06X" firstAttribute="top" secondItem="mmD-si-bqH" secondAttribute="bottom" constant="106" id="Sc7-xa-gLA"/>
                             <constraint firstItem="Fv8-nA-kMK" firstAttribute="top" secondItem="mmD-si-bqH" secondAttribute="bottom" constant="238" id="Sdn-LO-yOT"/>
                             <constraint firstItem="mmD-si-bqH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TvR-cg-HNr"/>
                             <constraint firstItem="cpf-tC-pB3" firstAttribute="top" secondItem="mmD-si-bqH" secondAttribute="bottom" constant="50" id="fTl-SP-qWB"/>
+                            <constraint firstItem="hGe-1d-F3r" firstAttribute="top" secondItem="Fv8-nA-kMK" secondAttribute="bottom" constant="48" id="jPP-eM-hrb"/>
                             <constraint firstItem="Fv8-nA-kMK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lah-xl-E7b"/>
                             <constraint firstItem="mmD-si-bqH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="112" id="u86-AU-rp8"/>
                             <constraint firstItem="zOF-fl-06X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uWi-nM-iKj"/>
                             <constraint firstItem="cpf-tC-pB3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uws-tc-VqB"/>
+                            <constraint firstItem="OG2-u6-els" firstAttribute="top" secondItem="hGe-1d-F3r" secondAttribute="bottom" constant="32" id="xB3-wc-7Gj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cosbyLabel" destination="zOF-fl-06X" id="yrF-dS-IXs"/>
                         <outlet property="fontSwitch" destination="cpf-tC-pB3" id="rmp-42-ZPS"/>
+                        <outlet property="numberLabel" destination="hGe-1d-F3r" id="8lk-Dm-1HW"/>
+                        <outlet property="numberStepper" destination="OG2-u6-els" id="pXN-Y0-CTn"/>
                         <outlet property="slider" destination="Fv8-nA-kMK" id="5Hy-bY-jHO"/>
                     </connections>
                 </viewController>

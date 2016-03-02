@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    @IBOutlet weak var numberStepper: UIStepper!
+    
     var sliderValue: CGFloat!
     
     // Change the name on the label when you click on the button
@@ -45,6 +49,10 @@ class ViewController: UIViewController {
         cosbyLabel.textColor = UIColor(red: sliderValue / 1.5, green: sliderValue, blue: sliderValue / 3.0, alpha: 1.0)
     }
     
+    @IBAction func changeNumber(sender: AnyObject) {
+        numberLabel.text = "\(Int(numberStepper.value))"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -58,7 +66,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
