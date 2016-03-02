@@ -12,28 +12,46 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var cosbyLabel: UILabel!
     
+    @IBOutlet weak var fontSwitch: UISwitch!
+    
     @IBOutlet weak var slider: UISlider!
     
-    // Change slider position for font and color
-    @IBAction func onSlide(sender: AnyObject) {
-        let sliderValue = CGFloat(slider.value)
-        cosbyLabel.font = UIFont(name: cosbyLabel.font.fontName, size: 300.0 * sliderValue)
-        cosbyLabel.textColor = UIColor(red: sliderValue / 2.0, green: sliderValue, blue: sliderValue / 2.5, alpha: 1.0)
-    }
+    var sliderValue: CGFloat!
     
     // Change the name on the label when you click on the button
     @IBAction func onClick(sender: AnyObject) {
-        if (cosbyLabel.text != "Bill Cosby") {
-            cosbyLabel.text = "Bill Cosby"
-        }
-        else {
+        if (cosbyLabel.text == "Bill Cosby") {
             cosbyLabel.text = "Miley Cyrus"
         }
+        else {
+            cosbyLabel.text = "Bill Cosby"
+        }
+    }
+    
+    @IBAction func changeFont(sender: AnyObject) {
+        sliderValue = CGFloat(slider.value)
+        if (fontSwitch.on) {
+            cosbyLabel.font = UIFont(name: "Arial", size: 300.0 * sliderValue)
+        }
+        else {
+            cosbyLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 300.0 * sliderValue)
+        }
+    }
+    
+    // Change slider position for font and color
+    @IBAction func onSlide(sender: AnyObject) {
+        sliderValue = CGFloat(slider.value)
+        cosbyLabel.font = UIFont(name: cosbyLabel.font.fontName, size: 300.0 * sliderValue)
+        cosbyLabel.textColor = UIColor(red: sliderValue / 1.5, green: sliderValue, blue: sliderValue / 3.0, alpha: 1.0)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        sliderValue = CGFloat(slider.value)
+        cosbyLabel.font = UIFont(name: cosbyLabel.font.fontName, size: 300.0 * sliderValue)
+        cosbyLabel.textColor = UIColor(red: sliderValue / 1.5, green: sliderValue, blue: sliderValue / 3.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
