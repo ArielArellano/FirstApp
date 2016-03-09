@@ -35,10 +35,10 @@ class ViewController: UIViewController {
     @IBAction func changeFont(sender: AnyObject) {
         sliderValue = CGFloat(slider.value)
         if (fontSwitch.on) {
-            cosbyLabel.font = UIFont(name: "Arial", size: 300.0 * sliderValue)
+            cosbyLabel.font = UIFont(name: "Arial", size: 320.0 * sliderValue)
         }
         else {
-            cosbyLabel.font = UIFont(name: "HelveticaNeue-UltraLight", size: 300.0 * sliderValue)
+            cosbyLabel.font = UIFont(name: "h-UltraLight", size: 300.0 * sliderValue)
         }
     }
     
